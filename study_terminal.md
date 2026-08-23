@@ -10,15 +10,18 @@
 | 读取文件内容 | Get‑Content &lt;文件&gt; | cat / type | cat readme.md<br>Get‑Content readme.md ‑Encoding utf8 | ‑Encoding utf8 参数避免中文乱码 |
 | 清空控制台屏幕 | Clear‑Host | cls | cls | 清空界面显示，不会删除历史命令记录 |
 
-补充说明<br>
-常用路径符号说明<br>
-~：家目录<br>
-/：根目录<br>
-..：上一级目录<br>
-./：当前目录<br><br>
-终端快捷操作<br>
-上下方向键：快速调取之前输入过的历史命令，重复执行无需重新输入<br>
-Tab 键：文件名、文件夹名、路径自动补全，输入开头后按 Tab 可自动补全名称，减少手动输入与拼写错误
+补充说明
+
+**常用路径符号说明**
+- `~`：家目录
+- `/`：根目录
+- `..`：上一级目录
+- `./`：当前目录
+
+**终端快捷操作**
+- 上下方向键：快速调取之前输入过的历史命令，重复执行无需重新输入
+- Tab 键：文件名、文件夹名、路径自动补全，输入开头后按 Tab 可自动补全名称，减少手动输入与拼写错误
+
 <br>
 
 | 功能描述 | Git命令 | 使用示例 | 备注 |
@@ -28,3 +31,6 @@ Tab 键：文件名、文件夹名、路径自动补全，输入开头后按 Tab
 | 提交版本 | git commit -m "描述" | `git commit -m "写清楚这次改了什么"` | `-m`后双引号填写提交说明 |
 | 查看简洁提交日志 | git log --oneline | `git log --oneline` | 简短展示每一次提交记录 |
 | 切换分支 | git checkout "编号"| `git checkout main` | 切换到main分支 |
+| 推送到远程仓库 | git push | `git push` | 将本地分支提交推送到远程origin对应分支 |
+| 获取远程最新信息(不合并) | git fetch | `git fetch` | 更新本地 origin/* 远程分支记录，不改动本地代码 |
+| 拉取远程代码并合并 | git pull | `git pull` | = git fetch + git merge，拉取远程代码合并到本地 |
